@@ -1,0 +1,58 @@
+.controller button{
+  box-sizing: border-box;
+  height: 70px;
+  width: 40px;
+  background-image: url("down.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  cursor: pointer;
+  padding: 22px;
+  border-radius: 50px;  
+  box-shadow: inset 0 0 0 6px rgb(96, 98, 101);
+  margin: 0 8px;
+  
+}
+
+.controller{
+  position: absolute;
+  right: 10%; top: 250px;
+  width: 170px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.controller button:hover{
+  opacity: 0.6;
+}
+#up{
+  /* position: absolute; */
+  left: 360px;
+  top: 30px;
+  transform: rotate(180deg);
+  grid-column: 2/3;
+  grid-row: 1/1;
+}
+#down{
+  grid-column: 2/3;
+  grid-row: 2/2;
+
+}
+#left{
+  transform: rotate(90deg);
+  grid-column: 1/2;
+  grid-row: 2/2;
+  margin-right: 10px;
+}
+#right{
+  
+  transform: rotate(-90deg);
+  grid-column: 3/4;
+  grid-row: 2/2;
+}
+@media (max-width: 400px) {
+  .controller {
+    top: 350px;
+  }
+}
